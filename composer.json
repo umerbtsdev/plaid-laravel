@@ -1,0 +1,70 @@
+{
+    "name": "abivia/plaid",
+    "description": "Plaid for Laravel",
+    "keywords": [
+        "abivia",
+        "laravel",
+        "plaid"
+    ],
+    "homepage": "https://github.com/abivia/plaid",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alan Langford",
+            "email": "foss@abivia.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.4",
+        "illuminate/contracts": "^9.0"
+    },
+    "require-dev": {
+        "nunomaduro/collision": "^6.0",
+        "orchestra/testbench": "^7.0",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Abivia\\Plaid\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Abivia\\Plaid\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": false
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Abivia\\Plaid\\PlaidServiceProvider"
+            ],
+            "aliases": {
+                "Plaid": "Abivia\\Plaid\\Facades\\Plaid"
+            }
+        }
+    },
+    "funding": [
+        {
+            "type": "ko-fi",
+            "url": "https://ko-fi.com/P5P47JJXZ"
+        }
+    ],
+    "allow-plugins": {
+        "pestphp/pest-plugin": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
